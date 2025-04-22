@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Three.js Game</title>
+    <style>body { margin: 0; overflow: hidden; }</style>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .menuLabel {
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        z-index: 10;
+        text-shadow: 1px 1px 2px black; 
+      }
+      
+      #outfitLabel, #hairLabel {
+        top: -20px;
+      }
+
+      #colorButtons, #hairButtons {
+        position: absolute;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        z-index: 10;
+      }
+
+      #colorButtons {
+        top: 50%;
+        left: 20px;
+      }
+
+      #hairButtons {
+        top: 50%;
+        left: 120px; /* Position the hair buttons to the right of the color buttons */
+      }
+
+      .colorButton, .hairButton {
+        display: flex;
+        gap: 4px;
+        padding: 6px;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      .colorButton.active, .hairButton.active {
+        border-color: yellow;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .swatch {
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="colorButtons">
+      <div id="outfitLabel" class="menuLabel">OUTFIT</div>
+    </div>
+
+    
+    <div id="hairButtons">
+      <div id="hairLabel" class="menuLabel">HAIR</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
